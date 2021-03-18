@@ -1,0 +1,13 @@
+Am implementat tabla de sah in clasa Board - acolo asezam fiecare piesa pentru
+a incepe un nou joc (metoda resetBoard).
+Pentru tabla de sah folosim o matrice indexata de la 0.
+Fiecare piesa este implementata intr-o clasa separata cu nume corespunzator.
+Codul pentru jocul efectiv este in clasa Game (unde este si main-ul).
+Citim comenzile de la xboard de la stdin intr-un BufferedReader si afisam
+miscarile in xboard cu un BufferedWriter.
+Comenzi implementate: new, white, black, force, go
+Pentru a genera jocul botului, folosim un algoritm de negamax (pentru adancimea 4), care intoarce o pereche formata
+din scorul maxim si cea mai buna miscare pe care va si urma sa o faca.
+Spatiul starilor este dat de toate miscarile valide posibile, intoarse de functia getLegals pentru fiecare piesa.
+De asemenea, am modificat fiecare piesa a tablei pentru a avea un scor (pozitiv pentru piesele de culoarea botului si
+negativ pentru engine).
